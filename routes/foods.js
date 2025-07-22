@@ -36,6 +36,21 @@ module.exports = (db) => {
     }
   });
 
+  router.get("/featured", async (req, res) => {
+    try {
+      const foods = await db
+        .collection("foods")
+        .find({ status: "available" })
+        .sort({ quantity: -1 })
+        .limit(6)
+        .toArray();
+
+      res.send(foods);
+    } catch (err) {
+      res.status(500).send({ error: "Failed to fetch featured foods" });
+    }
+  });
+
   router.get("/my-requests", async (req, res) => {
     try {
       const email = req.query.email;
