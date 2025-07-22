@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const connectToDB = require("./DB/connect");
 const usersRoutes = require('./routes/users');
-
+const foodRoutes = require('./routes/foods');
 
 
 
@@ -17,6 +17,7 @@ app.use(express.json());
 connectToDB().then((db) => {
 
   app.use('/users', usersRoutes);
+  app.use("/foods", foodRoutes(db));
   
 
   app.get("/", (req, res) => {
