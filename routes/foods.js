@@ -18,6 +18,23 @@ module.exports = (db) => {
     res.send(foods);
   });
 
+  router.get("/my-requests", async (req, res) => {
+    try {
+      const email = req.query.email;
+      if (!email) {
+        return res.status(400).send({ error: "Email is required" });
+      }
+      const requests = await db
+        .collection("foods")
+        .find({ status: "requested", requestedBy: email })
+        .toArray();
+
+      res.send(requests);
+    } catch (err) {
+      res.status(500).send({ error: "Could not fetch requested foods" });
+    }
+  });
+
   //   single food details route
   router.get("/:id", async (req, res) => {
     const { id } = req.params;
