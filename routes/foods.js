@@ -18,6 +18,24 @@ module.exports = (db) => {
     res.send(foods);
   });
 
+  router.get("/user", async (req, res) => {
+    const email = req.query.email;
+    if (!email) {
+      return res.status(400).send({ error: "Email is required" });
+    }
+
+    try {
+      const userFoods = await db
+        .collection("foods")
+        .find({ donorEmail: email })
+        .toArray();
+
+      res.send(userFoods);
+    } catch (err) {
+      res.status(500).send({ error: "Failed to fetch user foods" });
+    }
+  });
+
   router.get("/my-requests", async (req, res) => {
     try {
       const email = req.query.email;
@@ -53,6 +71,28 @@ module.exports = (db) => {
     }
   });
 
+  router.patch("/:id", async (req, res) => {
+    const { id } = req.params;
+    const { foodName, pickupLocation, expiredAt } = req.body;
+
+    try {
+      const result = await db.collection("foods").updateOne(
+        { _id: new ObjectId(id) },
+        {
+          $set: {
+            foodName,
+            pickupLocation,
+            expiredAt,
+          },
+        }
+      );
+
+      res.send({ message: "Food updated", result });
+    } catch (err) {
+      res.status(500).send({ error: "Update failed" });
+    }
+  });
+
   // POST: Add Food
   router.post("/", async (req, res) => {
     try {
@@ -83,6 +123,24 @@ module.exports = (db) => {
       res.send({ message: "Request successful" });
     } catch (err) {
       res.status(500).send({ error: "Update failed" });
+    }
+  });
+
+  router.delete("/:id", async (req, res) => {
+    const { id } = req.params;
+
+    try {
+      const result = await db
+        .collection("foods")
+        .deleteOne({ _id: new ObjectId(id) });
+
+      if (result.deletedCount === 0) {
+        return res.status(404).send({ error: "Food not found" });
+      }
+
+      res.send({ message: "Food deleted successfully" });
+    } catch (err) {
+      res.status(500).send({ error: "Delete failed" });
     }
   });
 
