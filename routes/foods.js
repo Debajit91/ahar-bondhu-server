@@ -114,7 +114,7 @@ module.exports = (db) => {
       const result = await foodCollection.insertOne(req.body);
       res.status(201).send({ insertedId: result.insertedId });
     } catch (err) {
-      console.error("Error adding food:", err);
+      
       res.status(500).send({ error: "Failed to add food" });
     }
   });

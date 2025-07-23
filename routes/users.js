@@ -50,7 +50,7 @@ router.post('/register', async (req, res) => {
 
     res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
-    console.error("Register route error:", error);
+    
     res.status(500).json({ error: 'Server error' });
   }
 });
@@ -62,7 +62,7 @@ router.post('/register', async (req, res) => {
 //     const users = await db.collection('users').find({}, { projection: { password: 0 } }).toArray(); // exclude passwords
 //     res.json(users);
 //   } catch (error) {
-//     console.error('Get users error:', error);
+//     
 //     res.status(500).json({ error: 'Server error' });
 //   }
 // });
@@ -76,7 +76,7 @@ router.get('/:id', async (req, res) => {
     if (!user) return res.status(404).json({ error: 'User not found' });
     res.json(user);
   } catch (error) {
-    console.error('Get user error:', error);
+    
     res.status(500).json({ error: 'Server error' });
   }
 });
