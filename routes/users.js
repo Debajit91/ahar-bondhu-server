@@ -3,7 +3,26 @@ const router = express.Router();
 const { ObjectId } = require('mongodb');
 const connectToDB = require('../DB/connect');
 
-
+router.get("/top-donators", async (req, res)=>{
+  try{
+    const db = await connectToDB();
+    const pipeline = [
+      {
+        $group:{
+          _id: "$donorEmail",
+          name:{ $first: "$donorName"},
+          count:{ $sum: 1 },
+        },
+      },
+      { $sort: {count: -1}},
+      { $limit: 5 },
+    ];
+    const result = await db.collection("foods").aggregate(pipeline).toArray();
+    res.send(result);
+  } catch (error){
+    res.status(500).send({ message:"Error fetching top donators"});
+  }
+})
 
 // POST /api/users/register — create new user
 router.post('/register', async (req, res) => {
