@@ -6,6 +6,7 @@ const connectToDB = require("./DB/connect");
 const usersRoutes = require("./routes/users");
 const foodRoutes = require("./routes/foods");
 const contactRoutes = require("./routes/contacts");
+const chatRouter = require("./routes/chat");
 
  const nodemailer = require("nodemailer");
 
@@ -19,6 +20,7 @@ connectToDB().then((db) => {
   app.use("/users", usersRoutes);
   app.use("/foods", foodRoutes(db));
   app.use("/contacts", contactRoutes(db));
+  app.use("/api", chatRouter);
 
   app.get("/", (req, res) => {
     res.send("Ahar Bondhu Server is running...");
