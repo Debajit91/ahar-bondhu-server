@@ -36,6 +36,38 @@ module.exports = (db) => {
     }
   });
 
+  router.get("/nearby", async (req, res) => {
+    try {
+      // lat, lng কে number এ convert করা
+      const lat = parseFloat(req.query.lat);
+      const lng = parseFloat(req.query.lng);
+
+      if (isNaN(lat) || isNaN(lng)) {
+        return res.status(400).send({ error: "Invalid latitude or longitude" });
+      }
+
+      const allFoods = await foodCollection
+        .find({ status: "available" })
+        .toArray();
+
+      // Approx distance filter
+      const nearbyFoods = allFoods.filter((food) => {
+        if (!food.location) return false;
+
+        const distance = Math.sqrt(
+          (food.location.lat - lat) ** 2 + (food.location.lng - lng) ** 2
+        );
+
+        return distance < 0.1; // adjust range as needed (~10–15km)
+      });
+
+      res.send(nearbyFoods);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send({ error: "Failed to fetch nearby foods" });
+    }
+  });
+
   router.get("/featured", async (req, res) => {
     try {
       const foods = await db
@@ -111,10 +143,25 @@ module.exports = (db) => {
   // POST: Add Food
   router.post("/", async (req, res) => {
     try {
-      const result = await foodCollection.insertOne(req.body);
+      const { foodName, quantity, description, image, donorEmail, location } =
+        req.body;
+
+      // location = { lat: number, lng: number } — from frontend
+      const newFood = {
+        foodName,
+        quantity,
+        description,
+        image,
+        donorEmail,
+        location,
+        status: "available",
+        createdAt: new Date(),
+      };
+
+      const result = await foodCollection.insertOne(newFood);
       res.status(201).send({ insertedId: result.insertedId });
     } catch (err) {
-      
+      console.error(err);
       res.status(500).send({ error: "Failed to add food" });
     }
   });
