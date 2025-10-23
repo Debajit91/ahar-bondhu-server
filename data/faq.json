@@ -1,0 +1,92 @@
+[
+  {
+    "category": "General App Help",
+    "q": "What is Ahar Bondhu?",
+    "a": "Ahar Bondhu is a community-based food sharing platform where people can donate, request, and share food to reduce waste and help others in need.\n👉 বাংলা: আহার বন্ধু একটি কমিউনিটি-ভিত্তিক প্ল্যাটফর্ম যেখানে মানুষ খাবার দান, অনুরোধ ও শেয়ার করতে পারে — যাতে খাবার নষ্ট না হয় এবং অভাবীদের সাহায্য করা যায়।"
+  },
+  {
+    "category": "Food Donation & Safety",
+    "q": "How can I donate food?",
+    "a": "Go to the “Add Food” section, fill in your food details (type, quantity, pickup location, expiry time), and click Post Food. Your food will appear in the available list for others to request.\n👉 বাংলা: “Add Food” সেকশনে যান, খাবারের তথ্য (ধরন, পরিমাণ, পিকআপ লোকেশন, মেয়াদ) দিন এবং Post Food বাটনে ক্লিক করুন।"
+  },
+  {
+    "category": "General App Help",
+    "q": "How can I request food?",
+    "a": "Open the Available Foods section, click the food you want, and press Request. You can also add a short note before submitting your request.\n👉 বাংলা: Available Foods সেকশনে যান, পছন্দের খাবার সিলেক্ট করুন এবং Request বাটনে চাপ দিন। চাইলে একটি ছোট নোটও যোগ করতে পারেন।"
+  },
+  {
+    "category": "General App Help",
+    "q": "Is Ahar Bondhu free to use?",
+    "a": "Yes! Ahar Bondhu is completely free — it’s built to encourage kindness and reduce food waste.\n👉 বাংলা: হ্যাঁ! এটি সম্পূর্ণ ফ্রি — ভালোবাসা ছড়াতে ও খাবার অপচয় কমাতে তৈরি।"
+  },
+  {
+    "category": "Food Donation & Safety",
+    "q": "What kind of food can I donate?",
+    "a": "You can donate both cooked and uncooked food — as long as it’s safe, fresh, and properly packed. Avoid spoiled or expired food.\n👉 বাংলা: রান্না করা বা কাঁচা – দুই ধরনের খাবারই দিতে পারেন, যদি তা নিরাপদ, টাটকা এবং সঠিকভাবে প্যাক করা থাকে। নষ্ট/মেয়াদোত্তীর্ণ খাবার দেবেন না।"
+  },
+  {
+    "category": "Food Donation & Safety",
+    "q": "How do I ensure my donated food is safe?",
+    "a": "• Use clean containers\n• Keep food covered\n• Clearly mention preparation/expiry time\n• Avoid donating cooked food older than 12 hours\n👉 বাংলা: • পরিষ্কার পাত্র ব্যবহার করুন\n• খাবার ঢেকে রাখুন\n• রান্না/মেয়াদ সময় উল্লেখ করুন\n• রান্না করা খাবার ১২ ঘণ্টার মধ্যে দিন"
+  },
+  {
+    "category": "Food Donation & Safety",
+    "q": "Can I donate leftover restaurant food?",
+    "a": "Yes, if it’s hygienic, safely stored, and properly packed. Restaurants and cafes are welcome to share surplus food via Ahar Bondhu.\n👉 বাংলা: হ্যাঁ, যদি তা স্বাস্থ্যসম্মত, সঠিকভাবে সংরক্ষিত এবং প্যাক করা থাকে। রেস্টুরেন্ট/ক্যাফের বাড়তি খাবারও শেয়ার করা যাবে।"
+  },
+  {
+    "category": "Location & Pickup",
+    "q": "How will someone collect the food?",
+    "a": "After a requester confirms, you’ll get their contact info or pickup location. Coordinate directly for a smooth handover.\n👉 বাংলা: কেউ অনুরোধ নিশ্চিত করলে তার যোগাযোগ/পিকআপ তথ্য পাবেন। সরাসরি সমন্বয় করে খাবার হস্তান্তর করুন।"
+  },
+  {
+    "category": "Location & Pickup",
+    "q": "Can I donate food outside my area?",
+    "a": "Currently Ahar Bondhu connects nearby users to keep sharing fast and easy. Wider location support is coming soon.\n👉 বাংলা: এখন কাছাকাছি এলাকায় সংযোগ দেয়া হয়। বড় এলাকায় সাপোর্ট খুব শীঘ্রই আসছে।"
+  },
+  {
+    "category": "Chatbot / AI Assistance",
+    "q": "What can you help me with?",
+    "a": "I can help you post or request food, check your donations, share food-safety tips, find nearby food shares, and answer questions about Ahar Bondhu.\n👉 বাংলা: আমি খাবার পোস্ট/রিকুয়েস্ট করতে, আপনার ডোনেশন দেখতে, নিরাপত্তা পরামর্শ দিতে, কাছাকাছি শেয়ার খুঁজে পেতে এবং আহার বন্ধুর বিভিন্ন প্রশ্নের উত্তর দিতে পারি।"
+  },
+  {
+    "category": "Chatbot / AI Assistance",
+    "q": "Can I talk in Bangla?",
+    "a": "Yes! You can speak in Bangla or English — I can reply in both.\n👉 বাংলা: হ্যাঁ! আপনি বাংলায় কথা বলতে পারেন। আমি ইংরেজি এবং বাংলা — দুই ভাষাতেই উত্তর দিতে পারি।"
+  },
+  {
+    "category": "Food Donation & Safety",
+    "q": "Can you suggest food safety tips?",
+    "a": "Keep food cool, use clean/airtight packaging, and share cooked food within 12 hours.\n👉 বাংলা: খাবার ঠান্ডা রাখুন, পরিষ্কার/এয়ারটাইট প্যাকিং করুন, আর রান্না করা খাবার ১২ ঘণ্টার মধ্যে শেয়ার করুন।"
+  },
+  {
+    "category": "Motivation & Community",
+    "q": "Why should I share food?",
+    "a": "Every meal you share can feed someone in need and reduce waste. Small acts create big impact. 💚\n👉 বাংলা: আপনি যে খাবারটি শেয়ার করেন, তা কারো ক্ষুধা মেটাতে পারে — এবং অপচয় কমায়। আপনার ছোট উদ্যোগ বড় পরিবর্তন আনে। 💚"
+  },
+  {
+    "category": "Motivation & Community",
+    "q": "How can I become a top contributor?",
+    "a": "Donate regularly! Your name will appear on the leaderboard as your total shares increase.\n👉 বাংলা: নিয়মিত দান করুন! আপনার মোট শেয়ার বাড়লে লিডারবোর্ডে আপনার নাম দেখাবে।"
+  },
+  {
+    "category": "Motivation & Community",
+    "q": "How do I invite friends to join Ahar Bondhu?",
+    "a": "Share your invite link from the app menu or ask them to visit the website — let’s grow the community together.\n👉 বাংলা: অ্যাপ মেনু থেকে আপনার ইনভাইট লিংক শেয়ার করুন অথবা ওয়েবসাইটে যেতে বলুন — সবাই মিলে কমিউনিটি বড় করি।"
+  },
+  {
+    "category": "Account & Sign-up",
+    "q": "How do I sign up on Ahar Bondhu?",
+    "a": "Go to the Signup page, enter your name, email, and password, then click Create Account.\n👉 বাংলা: সাইনআপ পেজে গিয়ে নাম, ইমেইল ও পাসওয়ার্ড দিয়ে Create Account চাপুন।"
+  },
+  {
+    "category": "Account & Sign-up",
+    "q": "Can I sign up using Google?",
+    "a": "Yes — click “Continue with Google” for a fast and secure sign-up.\n👉 বাংলা: হ্যাঁ — “Continue with Google” চাপলে দ্রুত ও নিরাপদ সাইনআপ করা যাবে।"
+  },
+  {
+    "category": "Account & Sign-up",
+    "q": "Can I use the same email for multiple accounts?",
+    "a": "No — each email can be used for only one account. Use a different email to create another account.\n👉 বাংলা: না — একই ইমেইল দিয়ে একাধিক একাউন্ট করা যাবে না। নতুন একাউন্টের জন্য ভিন্ন ইমেইল ব্যবহার করুন।"
+  }
+]
