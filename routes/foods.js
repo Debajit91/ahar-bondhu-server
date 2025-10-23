@@ -12,8 +12,7 @@ module.exports = (db) => {
     const foods = await db
       .collection("foods")
       .find(filter)
-      .sort(sortBy === "expireDate" ? { expireDate: 1 } : {})
-      .toArray();
+      .sort(sortBy === "expiredAt" ? { expiredAt: 1 } : {});
 
     res.send(foods);
   });
@@ -143,18 +142,32 @@ module.exports = (db) => {
   // POST: Add Food
   router.post("/", async (req, res) => {
     try {
-      const { foodName, quantity, description, image, donorEmail, location } =
-        req.body;
+      const {
+        foodName,
+        foodImage,
+        quantity,
+        pickupLocation,
+        expiredAt,
+        notes,
+        donorName,
+        donorEmail,
+        donorImage, // optional
+        status = "available",
+        location, // optional: { lat, lng } থাকলে রেখে দাও
+      } = req.body;
 
-      // location = { lat: number, lng: number } — from frontend
       const newFood = {
         foodName,
+        foodImage,
         quantity,
-        description,
-        image,
+        pickupLocation,
+        expiredAt,
+        notes,
+        donorName,
         donorEmail,
-        location,
-        status: "available",
+        donorImage: donorImage || null,
+        location: location || null,
+        status,
         createdAt: new Date(),
       };
 
